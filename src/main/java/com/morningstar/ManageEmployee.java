@@ -60,10 +60,10 @@ public class ManageEmployee {
         int index = findIndexEmployee(employeeId);
         if (index != -1) {
             employeeInfoList.set(index, employeeInfo);
-            System.out.println("updated employee info in the list");
+            System.out.println("updated employee info in the list of list");
         } else {
             employeeInfoList.add(employeeInfo);
-            System.out.println("added person object from the list");
+            System.out.println("added person object from the list of list");
         }
     }
 
