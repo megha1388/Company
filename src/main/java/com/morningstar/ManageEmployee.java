@@ -63,7 +63,7 @@ public class ManageEmployee {
             System.out.println("updated employee info in the");
         } else {
             employeeInfoList.add(employeeInfo);
-            System.out.println("added person object from the list");
+            System.out.println("added person object from the list of list");
         }
     }
 
