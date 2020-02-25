@@ -9,7 +9,7 @@ public class EmployeeRun {
         manageEmployee.deleteEmployee(1234);
         manageEmployee.printEmployee();
         EmployeeInfo employeeInfo= new EmployeeInfo(1234,"hsgdg",282982.22,"Male","ehvdh");
-        manageEmployee.updateEmployee(employeeInfo.getEmployeeId(),employeeInfo);
+        manageEmployee.updateEmployee(employeeInfo);
         manageEmployee.printEmployee();
         EmployeeInfo employeeInfo1 = manageEmployee.findEmployee(1234);
         manageEmployee.printEmployee(employeeInfo1);
