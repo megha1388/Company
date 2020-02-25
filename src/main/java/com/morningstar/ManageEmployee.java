@@ -60,7 +60,7 @@ public class ManageEmployee {
         int index = findIndexEmployee(employeeInfo.getEmployeeId());
         if (index != -1) {
             employeeInfoList.set(index, employeeInfo);
-            System.out.println("updated employee info in the list");
+            System.out.println("updated employee info in the");
         } else {
             employeeInfoList.add(employeeInfo);
             System.out.println("added person object from the list");
