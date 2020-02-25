@@ -30,10 +30,32 @@ public class EmployeeController {
     public String addEmployee(@RequestBody EmployeeInfo employeeInfo){
         if(manageEmployee.findEmployee(employeeInfo.getEmployeeId())==null) {
             manageEmployee.addEmployee(employeeInfo.getEmployeeId(),employeeInfo.getName(),employeeInfo.getGender(),employeeInfo.getSalary(),employeeInfo.getEmailId());
-            return "success";
+            return "Successfully Added";
         }
         else{
-            return "already existing employee in employee list";
+            return "Employee already exist in the employee list";
+        }
+    }
+
+    @DeleteMapping("/employee")
+    public String deleteEmployee(@RequestBody EmployeeInfo employeeInfo){
+        if(manageEmployee.findEmployee(employeeInfo.getEmployeeId())!=null){
+            manageEmployee.deleteEmployee(employeeInfo.getEmployeeId());
+            return "Employee deleted from the list";
+        }
+        else{
+            return "Employee is not available to delete";
+        }
+    }
+
+    @PutMapping("/employee")
+    public String putEmployee(@RequestBody EmployeeInfo employeeInfo){
+        if(manageEmployee.findEmployee(employeeInfo.getEmployeeId())!=null){
+            manageEmployee.updateEmployee(employeeInfo);
+            return "Employee updated in the list";
+        }
+        else{
+            return "Employee is not available to update";
         }
     }
 }

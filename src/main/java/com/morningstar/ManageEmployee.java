@@ -56,8 +56,8 @@ public class ManageEmployee {
         return -1;
     }
 
-    public void updateEmployee(int employeeId, EmployeeInfo employeeInfo) {
-        int index = findIndexEmployee(employeeId);
+    public void updateEmployee(EmployeeInfo employeeInfo) {
+        int index = findIndexEmployee(employeeInfo.getEmployeeId());
         if (index != -1) {
             employeeInfoList.set(index, employeeInfo);
             System.out.println("updated employee info in the list");
